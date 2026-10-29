@@ -3,7 +3,6 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Russian");
-
     int r, h;
     cout << "Введите ряды (2-8) и места в половине (1-5): ";
     cin >> r >> h;
