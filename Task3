@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+
+    int row, seat;
+
+    do {
+        cout << "Введите ряд (1-12) и место (1-20): ";
+        cin >> row >> seat;
+    } while (row < 1 || row > 12); (seat < 1 || seat > 20);
+
+    int price = 0;
+    if (row >= 1 && row <= 4) {
+        price = 7;
+    }
+    else if (row >= 5 && row <= 8) {
+        price = 9;
+    }
+    else if (row >= 9 && row <= 12) {
+        price = 11;
+    }
+
+    if (seat >= 8 && seat <= 13) {
+        price = price + 2;
+    }
+
+    cout << "Ряд: " << row << ", Место: " << seat << endl;
+    cout << "Итоговая цена: " << price << endl;
+
+    return 0;
+}
