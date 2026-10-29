@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+
+    int r, h;
+    cout << "Введите ряды (2-8) и места в половине (1-5): ";
+    cin >> r >> h;
+
+    if (r < 2 || r > 8 || h < 1 || h > 5) {
+        cout << "Ошибка: неверный ввод" << endl;
+        return 1;
+    }
+
+    int x_count = 0;
+
+    for (int i = 1; i <= r; i++) {
+        for (int j = 1; j <= 2 * h; j++) {
+
+            if (j == h + 1) {
+                cout << " || ";
+            }
+
+            if ((i + j) % 3 == 0) {
+                cout << "X";
+                x_count++;
+            }
+            else {
+                cout << ".";
+            }
+        }
+        cout << endl;
+    }
+
+    cout << "Всего X: " << x_count << endl;
+
+    return 0;
+}
