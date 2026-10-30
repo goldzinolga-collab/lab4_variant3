@@ -8,7 +8,7 @@ int main() {
     do {
         cout << "Введите ряд (1-12) и место (1-20): ";
         cin >> row >> seat;
-    } while (row < 1 || row > 12 ||seat < 1 || seat > 20);
+    } while (row < 1 || row > 12 || seat < 1 || seat > 20);
 
     int price = 0;
     if (row >= 1 && row <= 4) {
